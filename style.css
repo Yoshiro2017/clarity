@@ -10,6 +10,7 @@ Full license: see LICENSE file
   --font-heading: 'Noto Sans', 'Noto Serif', system-ui, sans-serif;
   --font-body: 'Noto Sans', 'Noto Serif', system-ui, sans-serif;
   --font-mono: 'Noto Sans Mono', monospace;
+  --font-adlam: 'Noto Sans Adlam', 'Noto Sans Adlam Unjoined', sans-serif;
 
   /* Color Palette — Clean Professional */
   --color-bg: #ffffff;
@@ -96,7 +97,7 @@ body {
   padding: 1.5rem 1rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   border-bottom: 1px solid var(--color-border);
   flex-wrap: wrap;
 }
@@ -113,7 +114,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem 1.25rem;
   margin-left: auto;
   flex-wrap: wrap;
 }
@@ -121,7 +122,7 @@ body {
 .nav-links a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   transition: color var(--transition);
   cursor: pointer;
@@ -257,12 +258,20 @@ body {
   text-decoration: underline;
 }
 
-.section code {
+.section code,
+.section pre {
   font-family: var(--font-mono);
   font-size: 0.9em;
   background-color: var(--color-card);
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
+}
+
+.section pre {
+  display: block;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
 }
 
 /* Footer */
@@ -294,7 +303,7 @@ footer a:hover {
     margin-left: 0;
     order: 3;
     width: 100%;
-    gap: 1rem 1.25rem;
+    gap: 1rem;
   }
   .hero h1 {
     font-size: 2rem;
