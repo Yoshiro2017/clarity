@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clarity — professional, ad-free, MIT Licensed">
+  <title>Clarity</title>
+  <!-- Noto Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Noto+Sans+Mono:wdth,wght@62.5..100,100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand" data-page="home">Clarity</div>
+      <ul class="nav-links">
+        <li><a data-page="home" class="active">Home</a></li>
+        <li><a data-page="about">About</a></li>
+        <li><a data-page="projects">Projects</a></li>
+        <li><a data-page="documentation">Documentation</a></li>
+        <li><a data-page="resources">Resources</a></li>
+        <li><a data-page="notes">Notes</a></li>
+        <li><a data-page="contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="material-symbols-outlined icon-sun">light_mode</span>
+        <span class="material-symbols-outlined icon-moon">dark_mode</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <div id="home" class="page active">
+      <section class="hero">
+        <h1>Clarity</h1>
+        <p>A professional, thoughtfully designed space built for clarity, accessibility, and longevity. Every element has been chosen with care — from the typography to the color palette — to create an experience that is both functional and pleasant to use.</p>
+        <p>There are no advertisements, no tracking scripts, and no unnecessary distractions. This site exists to share information, ideas, and work in a respectful and transparent manner.</p>
+        <a data-page="about" class="btn-primary">Learn More</a>
+      </section>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="page">
+      <section class="section">
+        <h2>About Clarity</h2>
+        <p>This website was created with a straightforward philosophy: information should be presented clearly, it should be accessible to everyone, and it should remain free of commercial influence or hidden surveillance. Whether you are visiting on a desktop computer, a tablet, or a phone, the layout adapts to ensure that content remains readable and well-organized.</p>
+        <p>The design uses the Noto family of typefaces — a comprehensive set of fonts designed to support every written language in the world. Noto Sans and Noto Serif provide excellent readability for body text, while Noto Sans Display and Noto Serif Display offer refined letter spacing and proportions for headings and titles at larger sizes. Noto Sans Mono is used where fixed-width characters are appropriate, such as code snippets or technical examples.</p>
+        <p>You may switch between light and dark appearance using the icon in the navigation bar. Your preference will be remembered automatically. If you have not yet made a selection, the site will match your operating system's theme setting by default. Transitions between themes are smooth and designed to be easy on the eyes.</p>
+        <h3>Design Philosophy</h3>
+        <p>Every design decision here follows three principles: legibility first, consistency throughout, and minimal overhead. Content is separated from presentation, files are organized logically, and everything is structured so that it can be maintained, extended, or adapted by anyone. This approach is not just about aesthetics — it is about respect for your time, your attention, and your privacy.</p>
+        <h3>License</h3>
+        <p>The entire codebase and design are released under the MIT License. This means you are free to use, modify, and distribute this work, provided that the original copyright notice and license terms are included. There are no restrictions on commercial use, and no ongoing obligations beyond proper attribution. See the <a href="LICENSE" target="_blank" rel="noopener">LICENSE</a> file for the full legal text.</p>
+      </section>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" class="page">
+      <section class="section">
+        <h2>Projects</h2>
+        <p>Below is an overview of ongoing and completed work under Clarity. Each entry includes a description of the project's purpose, its current status, and where applicable, links to source code, documentation, or demonstration materials.</p>
+        
+        <h3>Foundation</h3>
+        <p>This project began as an exploration of clean, maintainable web architecture and has grown into the foundation of Clarity itself. The goal was to create a template that is lightweight, standards-compliant, and easy to extend without requiring complex tools or heavy dependencies. Every component — from the navigation system to the theme switching logic — was built to be understandable and modifiable by anyone, regardless of experience level.</p>
+        <p>Current status: Active. Regular refinements are made to improve accessibility, performance, and consistency across browsers. Feedback and suggestions are welcome.</p>
+        
+        <h3>Reference Library</h3>
+        <p>An initiative to compile and organize reference materials on open-source licensing, best practices for digital privacy, and accessible web design. The intention is not to replace existing resources, but to curate and explain them in a way that is concise, up-to-date, and free of the clutter found on many reference sites. Topics include choosing an appropriate open license, writing clear privacy statements, testing for accessibility compliance, and designing interfaces that respect user autonomy.</p>
+        <p>Current status: In development. Content is being reviewed and structured. Sections will be published as they reach a stable draft stage.</p>
+        
+        <h3>Design System</h3>
+        <p>A collection of reusable design patterns and style guides intended to complement the Noto typography used across Clarity. It establishes consistent rules for spacing, contrast, hierarchy, and interaction so that new pages can be added without drifting from established standards. This is not a framework in the traditional sense — it is a living document that evolves as needs change. The emphasis is on understanding why each rule exists, not just following it blindly.</p>
+        <p>Current status: Foundation complete. Additional patterns and examples will be added over time.</p>
+        
+        <h3>Archive</h3>
+        <p>Earlier work and experimental projects are preserved here as reference. While they may no longer be actively maintained, they remain available for historical interest and for anyone studying how ideas develop over time. Code in this section may not follow current best practices, and documentation may be incomplete or out of date.</p>
+      </section>
+    </div>
+
+    <!-- DOCUMENTATION -->
+    <div id="documentation" class="page">
+      <section class="section">
+        <h2>Documentation</h2>
+        <p>This section explains how Clarity is structured, how to modify it, and how to deploy it. It is written to be accessible to beginners while remaining thorough enough to be useful to more experienced developers.</p>
+        
+        <h3>File Structure</h3>
+        <p>All files are organized in a flat directory structure for simplicity. There are no subfolders by default, though you may add them as your site grows. The main files are:</p>
+        <ul>
+          <li><code>index.html</code> — The main page containing all content and navigation structure.</li>
+          <li><code>style.css</code> — All visual styling including fonts, colors, spacing, and responsive behavior.</li>
+          <li><code>script.js</code> — Page navigation and theme preference handling.</li>
+          <li><code>LICENSE</code> — Full text of the MIT License.</li>
+          <li><code>README.md</code> — Overview, setup instructions, and deployment guide.</li>
+          <li><code>.gitignore</code> — Files that should not be tracked by Git.</li>
+        </ul>
+        
+        <h3>Adding Content</h3>
+        <p>To edit existing pages, simply locate the corresponding <code>&lt;div id="page-name" class="page"&gt;</code> block in <code>index.html</code> and modify the text inside. Headings use <code>&lt;h2&gt;</code> for page titles and <code>&lt;h3&gt;</code> for subsections. Paragraphs are wrapped in <code>&lt;p&gt;</code> tags. This consistent hierarchy helps screen readers and search engines understand the structure of your content.</p>
+        <p>To add a completely new page, create a new block following the same pattern, give it a unique <code>id</code>, and add a corresponding navigation link in the <code>&lt;ul class="nav-links"&gt;</code> list. The navigation script will detect it automatically — no JavaScript changes are required.</p>
+        
+        <h3>Styling and Appearance</h3>
+        <p>All design values are defined as CSS variables at the top of <code>style.css</code>. This makes it easy to adjust colors, fonts, spacing, or rounded corners across the entire site by changing only one place. For example, modifying the <code>--color-accent</code> variable will update buttons, links, and highlights everywhere they appear.</p>
+        <p>Font assignments follow a deliberate pattern: headings use Noto Sans Display or Noto Serif Display for optimal appearance at larger sizes; body text uses Noto Sans or Noto Serif for comfortable reading; and code or technical notation uses Noto Sans Mono. You may change these assignments in the <code>:root</code> section if you prefer a different combination.</p>
+        
+        <h3>Deployment</h3>
+        <p>To publish Clarity using GitHub Pages, create a repository named <code>username.github.io</code> where <code>username</code> is your GitHub username. Upload your files, then go to the repository Settings, navigate to Pages, and select the main branch as the source. Your site will be live at your-username.github.io within a few minutes. No server configuration or database setup is needed — everything runs directly in the visitor's browser.</p>
+        <p>You may also host these files on any other web server or service that supports static HTML. The code does not require any server-side language or special environment.</p>
+      </section>
+    </div>
+
+    <!-- RESOURCES -->
+    <div id="resources" class="page">
+      <section class="section">
+        <h2>Resources</h2>
+        <p>This page collects useful references, tools, and reading materials related to web design, open standards, and digital privacy. These resources are provided for information purposes; inclusion does not imply endorsement unless explicitly stated.</p>
+        
+        <h3>Typography and Fonts</h3>
+        <p>The Noto font family was selected for its comprehensive language support, open licensing, and consistent design quality across styles and weights. Developed by Google and contributors, every font in the family is released under the SIL Open Font License, which permits free use and redistribution without restrictions. The full set of available weights and widths gives you fine-grained control over emphasis and hierarchy.</p>
+        <p>For best results, match the font to its purpose: Display variants are optimized for larger sizes and tighter spacing, making them ideal for titles and headings. Standard variants are designed for paragraph text at normal reading distances. Monospace fonts are intended for code, data, or any content where character width must remain constant.</p>
+        
+        <h3>Web Standards and Accessibility</h3>
+        <p>Building sites that work well for everyone means following established standards and designing with accessibility in mind from the beginning. Semantic HTML — using the correct element for its intended purpose — is the foundation of this approach. It ensures that assistive technologies can interpret content correctly, that search engines can index it accurately, and that your site remains functional even when styling is disabled.</p>
+        <p>Key guidelines include maintaining sufficient color contrast between text and background, providing descriptive link text rather than generic phrases, ensuring that all interactive elements are usable with a keyboard alone, and structuring headings in a logical order. These practices benefit all visitors, not those using specialized tools.</p>
+        
+        <h3>Privacy and Independence</h3>
+        <p>You do not need to collect data to build a useful or successful website. Clarity does not use analytics scripts, fingerprint visitors, or embed third-party tracking pixels. When a site loads resources such as fonts from external sources, the standard web request may include basic information such as IP address and browser type — this is inherent to how the web works, not an additional choice made here.</p>
+        <p>If you are building your own site, consider what you include and why. Every third-party script adds potential privacy implications and performance costs. Defaulting to minimal, self-contained code is a responsible design decision that respects your visitors.</p>
+        
+        <h3>Recommended Reading</h3>
+        <p>Further information on these topics can be found in publicly available documentation from the World Wide Web Consortium (W3C), the Web Content Accessibility Guidelines (WCAG), and the Mozilla Developer Network (MDN). These are authoritative, community-maintained resources that explain web standards clearly and without cost.</p>
+      </section>
+    </div>
+
+    <!-- NOTES -->
+    <div id="notes" class="page">
+      <section class="section">
+        <h2>Notes</h2>
+        <p>This section serves as a personal reference area for Clarity. Content here may be revised, expanded, or removed as understanding evolves. Entries may range from detailed observations to brief reminders — they are preserved here primarily for convenience and for anyone who finds similar lines of thinking useful.</p>
+        
+        <h3>Design Observations</h3>
+        <p>Consistency is more powerful than many people realize. When every element behaves predictably, visitors can focus on content rather than learning how to navigate your interface. Small details — the same hover effect on every link, the same width for every paragraph block, the same spacing above every heading — combine to create a feeling of reliability and care. It is not about being perfect; it is about being predictable.</p>
+        <p>White space is not empty space; it is an active part of the design. It guides the eye, separates ideas, and gives content room to breathe. Resist the urge to fill every gap. Generous spacing improves readability and gives the page a calm, uncluttered character.</p>
+        
+        <h3>Technical Notes</h3>
+        <p>JavaScript should enhance a page, not be required for it. The navigation system here provides smooth transitions and theme memory, but Clarity remains fully functional even if scripting is disabled. This progressive enhancement approach ensures maximum compatibility and graceful degradation across every environment.</p>
+        <p>External resources are kept to a minimum. Only the font and icon sets are loaded from outside sources. Everything else — structure, styling, and behavior — is contained directly within these files. This reduces dependency on third-party services and makes the site easier to archive, mirror, or run offline.</p>
+        
+        <h3>Looking Forward</h3>
+        <p>Planned improvements include expanded documentation, additional example layouts, and guidance on self-hosting fonts so that no external requests are required at all. There is also interest in exploring how to serve Clarity over alternative networks such as IPFS or Gemini, to provide additional ways to access the same content.</p>
+        <p>Change is inevitable, but it should be deliberate. When updating or rebuilding, preserve the principles that make Clarity work: clarity, restraint, and respect for the visitor.</p>
+      </section>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="page">
+      <section class="section">
+        <h2>Contact</h2>
+        <p>Your time and attention are valued, and every message concerning Clarity is read carefully. While a response is not always guaranteed, every reasonable effort will be made to reply promptly and thoroughly. Please understand that unsolicited commercial messages or automated inquiries will not receive a reply.</p>
+        
+        <h3>Preferred Methods</h3>
+        <p>Email is the primary point of contact. It is reliable, widely supported, and does not require you to create an account on any specific platform. When writing, please include a clear subject line and provide context so the message can be understood without needing additional information. This helps ensure that your inquiry reaches the right place and receives a thoughtful response.</p>
+        <p>For technical matters — reporting a broken link, suggesting a correction, or discussing code implementation — GitHub is also appropriate. Issues and pull requests are visible publicly and remain available as reference for others. If you are reporting a security concern, please do so privately so that it can be addressed responsibly before details are made public.</p>
+        
+        <h3>What to Expect</h3>
+        <p>Messages are typically reviewed during regular working hours. Responses may take anywhere from a day to a few weeks depending on availability and the complexity of the topic. There is no team managing these inquiries — Clarity is maintained alongside other commitments. Thank you for your patience.</p>
+        <p>Please do not send the same message through multiple channels. It does not speed up a reply; it only creates duplicate work and increases the chance that something will be overlooked. One message is sufficient and appreciated.</p>
+        
+        <h3>Details</h3>
+        <p>Email: <code>yourname@example.com</code></p>
+        <p>GitHub: Replace with your profile link when available</p>
+        <p>Location: Metro Manila, Philippines</p>
+        <p>Time zone: UTC+8</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Clarity — <a href="LICENSE" target="_blank" rel="noopener">MIT License</a>. No ads, no tracking.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
