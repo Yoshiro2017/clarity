@@ -10,7 +10,9 @@ Full license: see LICENSE file
   --font-heading: 'Noto Sans', 'Noto Serif', system-ui, sans-serif;
   --font-body: 'Noto Sans', 'Noto Serif', system-ui, sans-serif;
   --font-mono: 'Noto Sans Mono', monospace;
-  --font-adlam: 'Noto Sans Adlam', 'Noto Sans Adlam Unjoined', sans-serif;
+  --font-ahom: 'Noto Serif Ahom', serif;
+  --font-adlam-joined: 'Noto Sans Adlam', sans-serif;
+  --font-adlam-unjoined: 'Noto Sans Adlam Unjoined', sans-serif;
 
   /* Color Palette — Clean Professional */
   --color-bg: #ffffff;
@@ -192,6 +194,71 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Font Samples */
+.font-samples {
+  max-width: 80ch;
+  margin: 3rem auto 0;
+  text-align: left;
+  border-top: 1px solid var(--color-border);
+  padding-top: 2rem;
+}
+
+.font-samples h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--color-heading);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.sample-block {
+  margin-bottom: 1.5rem;
+}
+
+.sample-block h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sample-block p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  background-color: var(--color-card);
+  border-radius: var(--radius);
+  margin: 0;
+}
+
+.sample-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 0.4rem;
+  padding: 0 0.25rem;
+}
+
+.ahom-sample {
+  font-family: var(--font-ahom);
+}
+
+.adlam-joined-sample {
+  font-family: var(--font-adlam-joined);
+}
+
+.adlam-unjoined-sample {
+  font-family: var(--font-adlam-unjoined);
+}
+
+.latin-sample,
+.cyrillic-sample,
+.greek-sample {
+  font-family: var(--font-body);
+}
+
 /* Buttons */
 .btn-primary {
   display: inline-block;
@@ -202,6 +269,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   transition: background-color var(--transition), transform var(--transition);
+  margin-top: 2rem;
 }
 
 .btn-primary:hover {
