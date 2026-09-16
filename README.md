@@ -4,7 +4,7 @@ Clean, professional website using the Noto font family.
 Released under the MIT License.
 
 ## Features
-- Noto Sans / Noto Serif / Noto Sans Display / Noto Serif Display / Noto Sans Mono / Noto Sans Adlam / Noto Sans Adlam Unjoined
+- Noto fonts
 - Light & dark modes with system detection and persistent preference
 - Material Symbols theme toggle
 - Ten pages: Home, About, What's New, Projects, Documentation, Font Commands, FAQ, Resources, Notes, Contact
