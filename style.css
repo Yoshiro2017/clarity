@@ -5,18 +5,19 @@ Full license: see LICENSE file
 */
 
 :root {
-  /* Font Families — Display for headings, standard for body, script families included */
   --font-display-sans: 'Noto Sans Display', system-ui, sans-serif;
   --font-display-serif: 'Noto Serif Display', Georgia, serif;
   --font-sans: 'Noto Sans', system-ui, sans-serif;
   --font-serif: 'Noto Serif', Georgia, serif;
   --font-mono: 'Noto Sans Mono', monospace;
+  --font-arabic-primary: 'Noto Sans Arabic', sans-serif;
+  --font-arabic-display: 'Noto Kufi Arabic', sans-serif;
+  --font-arabic-traditional: 'Noto Naskh Arabic', serif;
   --font-anatolian: 'Noto Sans Anatolian Hieroglyphs', sans-serif;
   --font-ahom: 'Noto Serif Ahom', serif;
   --font-adlam-joined: 'Noto Sans Adlam', sans-serif;
   --font-adlam-unjoined: 'Noto Sans Adlam Unjoined', sans-serif;
 
-  /* Color Palette — Light Mode */
   --bg: #ffffff;
   --surface: #f8f9fa;
   --text: #1f2328;
@@ -26,7 +27,6 @@ Full license: see LICENSE file
   --border: #d1d9e0;
   --hover: #eef2f7;
 
-  /* Layout */
   --max-width: 1040px;
   --radius: 6px;
   --transition: 0.18s ease;
@@ -56,7 +56,6 @@ Full license: see LICENSE file
   }
 }
 
-/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -76,7 +75,6 @@ body {
   transition: background-color var(--transition), color var(--transition);
 }
 
-/* Typography Hierarchy */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.25;
@@ -148,7 +146,6 @@ pre {
   border: 1px solid var(--border);
 }
 
-/* Navigation Bar */
 .navbar {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -193,6 +190,75 @@ pre {
   color: var(--accent);
 }
 
+.nav-more {
+  position: relative;
+}
+
+.nav-more-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.nav-more-toggle:hover,
+.nav-more-toggle[aria-expanded="true"] {
+  background-color: var(--hover);
+  color: var(--accent);
+}
+
+.expand-icon {
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.nav-more-toggle[aria-expanded="true"] .expand-icon {
+  transform: rotate(180deg);
+}
+
+.nav-more-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  list-style: none;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 0.5rem 0;
+  margin: 0;
+  display: none;
+  z-index: 100;
+}
+
+.nav-more-submenu[aria-hidden="false"] {
+  display: block;
+}
+
+.nav-more-submenu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color var(--transition);
+}
+
+.nav-more-submenu a:hover,
+.nav-more-submenu a.active {
+  background-color: var(--hover);
+  color: var(--accent);
+}
+
 .theme-toggle {
   background: none;
   border: none;
@@ -213,7 +279,6 @@ pre {
   display: block;
 }
 
-/* Page Visibility */
 .page {
   display: none;
   animation: fadeIn 0.2s ease;
@@ -228,7 +293,6 @@ pre {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Sections */
 .section, .hero {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -245,7 +309,6 @@ pre {
   font-size: 1.05rem;
 }
 
-/* Font Samples */
 .font-samples {
   margin-top: 3rem;
   text-align: left;
@@ -288,6 +351,34 @@ pre {
   border: none;
 }
 
+.source-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.arabic-sans-sample {
+  font-family: var(--font-arabic-primary);
+  direction: rtl;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.arabic-kufi-sample {
+  font-family: var(--font-arabic-display);
+  direction: rtl;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.arabic-naskh-sample {
+  font-family: var(--font-arabic-traditional);
+  direction: rtl;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
 .anatolian-sample {
   font-family: var(--font-anatolian);
   font-size: 1.8rem;
@@ -315,24 +406,16 @@ pre {
   direction: rtl;
 }
 
-.latin-sample {
-  font-family: var(--font-sans);
-}
-
-.cyrillic-sample {
-  font-family: var(--font-sans);
-}
-
-.greek-sample {
+.latin-sample, .cyrillic-sample, .greek-sample {
   font-family: var(--font-sans);
 }
 
 .mono-sample {
   font-family: var(--font-mono);
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-/* Buttons */
 .btn-primary {
   display: inline-block;
   margin-top: 1rem;
@@ -351,7 +434,6 @@ pre {
   text-decoration: none;
 }
 
-/* Footer */
 footer {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -366,13 +448,20 @@ footer p {
   margin: 0 auto;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
   .navbar { justify-content: space-between; }
   .nav-links { order: 3; width: 100%; margin-top: 0.5rem; }
+  .nav-more-submenu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding-left: 1rem;
+  }
   .section, .hero { padding-top: 1.5rem; padding-bottom: 2.5rem; }
   .anatolian-sample { font-size: 1.4rem; }
-  .ahom-sample, .adlam-joined-sample, .adlam-unjoined-sample { font-size: 1.2rem; }
+  .ahom-sample, .adlam-joined-sample, .adlam-unjoined-sample,
+  .arabic-sans-sample, .arabic-kufi-sample, .arabic-naskh-sample { font-size: 1.15rem; }
 }
