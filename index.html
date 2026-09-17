@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Clarity — professional, ad-free, MIT Licensed">
   <title>Clarity</title>
-  <!-- Noto Fonts — including script families -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Noto+Sans+Mono:wdth,wght@62.5..100,100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Noto+Sans+Anatolian+Hieroglyphs&family=Noto+Serif+Ahom&family=Noto+Sans+Adlam:wght@400;700&family=Noto+Sans+Adlam+Unjoined:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Naskh+Arabic:wght@400..700&family=Noto+Sans+Adlam+Unjoined:wght@400..700&family=Noto+Sans+Adlam:wght@400..700&family=Noto+Sans+Anatolian+Hieroglyphs&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Sans+Display:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Noto+Sans+Mono:wdth,wght@62.5..100,100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Noto+Serif+Ahom&family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,13 +18,22 @@
       <ul class="nav-links">
         <li><a data-page="home" class="active">Home</a></li>
         <li><a data-page="about">About</a></li>
-        <li><a data-page="design">Design</a></li>
         <li><a data-page="typography">Typography</a></li>
-        <li><a data-page="features">Features</a></li>
-        <li><a data-page="architecture">Architecture</a></li>
-        <li><a data-page="deployment">Deployment</a></li>
-        <li><a data-page="license">License</a></li>
-        <li><a data-page="contact">Contact</a></li>
+        <li class="nav-more">
+          <button class="nav-more-toggle">
+            More
+            <span class="material-symbols-outlined expand-icon">expand_more</span>
+          </button>
+          <ul class="nav-more-submenu">
+            <li><a data-page="scripts-overview">What's Luwian, Ahom, Adlam or Arabic?</a></li>
+            <li><a data-page="design">Design</a></li>
+            <li><a data-page="features">Features</a></li>
+            <li><a data-page="architecture">Architecture</a></li>
+            <li><a data-page="deployment">Deployment</a></li>
+            <li><a data-page="license">License</a></li>
+            <li><a data-page="contact">Contact</a></li>
+          </ul>
+        </li>
       </ul>
       <button class="theme-toggle" aria-label="Toggle theme">
         <span class="material-symbols-outlined icon-sun">light_mode</span>
@@ -36,21 +43,38 @@
   </header>
 
   <main>
-    <!-- HOME -->
     <div id="home" class="page active">
       <section class="hero">
         <h1>Clarity</h1>
         <p>A professional, thoughtfully designed digital space built on principles of clarity, accessibility, and respectful design. Every element — from the comprehensive selection of typefaces to the palette, spacing, and interaction patterns — has been chosen with deliberate intent, balancing aesthetic refinement with functional utility.</p>
         <p>This is not a commercial platform. There are no advertisements, no tracking scripts, no analytics, and no third-party monitoring. This space exists to present information, share ideas, and demonstrate thoughtful web design in a manner that respects your attention, your time, and your privacy.</p>
-        <p>The foundation is built entirely on open standards and open-source technology. The Noto font family provides comprehensive typographic support — from global Latin, Cyrillic, and Greek scripts to historical and regional writing systems — with consistent quality across devices and languages. The codebase is minimal, self-contained, and designed to be understood, modified, and extended by anyone without requiring specialized tools or proprietary systems.</p>
+        <p>The foundation is built entirely on open standards and open-source technology. The Noto font family provides comprehensive typographic support — from global Latin, Cyrillic, Greek, and Arabic scripts to historical and regional writing systems — with consistent quality across devices and languages. The codebase is minimal, self-contained, and designed to be understood, modified, and extended by anyone without requiring specialized tools or proprietary systems.</p>
         
         <div class="font-samples">
           <h2>Typeface Samples</h2>
           
           <div class="sample-block">
+            <h3>Noto Sans Arabic — Primary</h3>
+            <p class="arabic-sans-sample">الاعتراف بالكرامة المتأصلة في جميع أعضاء الأسرة البشرية وبحقوقهم المتساوية وغير القابلة للتصرف هو أساس الحرية والعدل والسلام في العالم.</p>
+            <p class="sample-note">Modern, clear, optimized for body text and general interface use.</p>
+          </div>
+          
+          <div class="sample-block">
+            <h3>Noto Kufi Arabic — Display</h3>
+            <p class="arabic-kufi-sample">الاعتراف بالكرامة المتأصلة في جميع أعضاء الأسرة البشرية وبحقوقهم المتساوية وغير القابلة للتصرف هو أساس الحرية والعدل والسلام في العالم.</p>
+            <p class="sample-note">Geometric and bold; for headings and decorative purposes.</p>
+          </div>
+          
+          <div class="sample-block">
+            <h3>Noto Naskh Arabic — Traditional</h3>
+            <p class="arabic-naskh-sample">الاعتراف بالكرامة المتأصلة في جميع أعضاء الأسرة البشرية وبحقوقهم المتساوية وغير القابلة للتصرف هو أساس الحرية والعدل والسلام في العالم.</p>
+            <p class="sample-note">Classic calligraphic form; formal publications and extended reading.</p>
+          </div>
+          
+          <div class="sample-block">
             <h3>Anatolian Hieroglyphs</h3>
             <p class="anatolian-sample">𔗷𔗬𔑈𔓯𔐤𔗷𔖶𔔆𔗐𔓱𔑣𔓢𔑈𔓷𔖻𔗔𔑏𔖱𔗷𔖶𔑦𔗬𔓯𔓷 𔖖𔓢𔕙𔑯𔗦 𔖪𔖱𔖪 𔑮𔐓𔗵𔗬 𔐱𔕬𔗬𔑰𔖱</p>
-            <p class="sample-note">Luwoic hieroglyphic script — Hittite imperial writing system.</p>
+            <p class="sample-note">Luwian hieroglyphic script — Hittite imperial writing system.</p>
           </div>
           
           <div class="sample-block">
@@ -62,13 +86,13 @@
           <div class="sample-block">
             <h3>Adlam — Joined</h3>
             <p class="adlam-joined-sample">𞤚𞤵𞥅𞤺𞤢𞥄𞤣𞤫 𞤱𞤮𞤲𞥆𞤣𞤫 𞤸𞤫𞤬𞤼𞤭𞤲𞤺𞤮𞤤 𞤸𞤮𞤪𞤥𞤢 𞤳𞤢𞤤𞤢 𞤲𞤫𞤯𞥆𞤮 𞤫</p>
-            <p class="sample-note">Joined Adlam — connected cursive form used in publications.</p>
+            <p class="sample-note">Connected cursive form used in publications.</p>
           </div>
           
           <div class="sample-block">
             <h3>Adlam — Unjoined</h3>
             <p class="adlam-unjoined-sample">𞤚𞤵𞥅𞤺𞤢𞥄𞤣𞤫 𞤱𞤮𞤲𞥆𞤣𞤫 𞤸𞤫𞤬𞤼𞤭𞤲𞤺𞤮𞤤 𞤸𞤮𞤪𞤥𞤢 𞤳𞤢𞤤𞤢 𞤲𞤫𞤯𞥆𞤮 𞤫</p>
-            <p class="sample-note">Unjoined Adlam — separated letter forms for education and beginners.</p>
+            <p class="sample-note">Separated letter forms for education and beginners.</p>
           </div>
           
           <div class="sample-block">
@@ -87,16 +111,48 @@
           </div>
           
           <div class="sample-block">
-            <h3>Code</h3>
-            <p class="mono-sample">print("Hello, world!")</p>
+            <h3>Mono</h3>
+            <p class="mono-sample">function clarity() { return "readable, consistent, complete, inclusive"; }</p>
           </div>
         </div>
 
-        <a data-page="about" class="btn-primary">Learn More</a>
+        <a data-page="scripts-overview" class="btn-primary">Learn About These Scripts</a>
       </section>
     </div>
 
-    <!-- ABOUT -->
+    <div id="scripts-overview" class="page">
+      <section class="section">
+        <h2>What's Luwian, Ahom, Adlam or Arabic?</h2>
+        <p>Each writing system included here represents a distinct cultural and historical tradition. Below is an overview of their origins, characteristics, and current status.</p>
+
+        <h3>Arabic</h3>
+        <p>Arabic is one of the world's most widely used writing systems, serving as the primary script for more than 420 million people across the Middle East, North Africa, and beyond. Originating in the Arabian Peninsula in pre-Islamic times, it evolved into a major literary and religious vehicle from the 7th century onward. Written from right to left, it is a cursive script where letters connect, with forms changing depending on position within a word. It has developed distinct calligraphic traditions — including Kufi, Naskh, Ruq'ah, and Thuluth — each suited to different purposes. Beyond the Arabic language itself, the script has been adapted to write Persian, Urdu, Pashto, Kurdish, and many other languages.</p>
+        <p>Three distinct Noto families demonstrate its range: <strong>Sans Arabic</strong> for modern clarity and daily use, <strong>Kufi Arabic</strong> for geometric display, and <strong>Naskh Arabic</strong> for traditional, flowing legibility.</p>
+        <p class="source-note">Source: Wikipedia — <a href="https://en.wikipedia.org/wiki/Arabic" target="_blank" rel="noopener">Arabic</a></p>
+
+        <h3>Luwian / Anatolian Hieroglyphs</h3>
+        <p>Also known as Luwian hieroglyphs, this was the primary writing system of the Luwian people and the Hittite Empire across ancient Anatolia and northern Syria, used from roughly 1400 to 700 BCE. Unlike alphabetic systems, it is a mixed script combining logographic symbols and syllabic signs. Over 500 distinct signs have been identified. Deciphered during the 20th century, these inscriptions record royal deeds, religious dedications, and administrative records. The script fell out of use as alphabetic writing systems spread through the region, leaving a valuable archaeological record of languages and cultures otherwise lost to time.</p>
+        <p>Noto Sans Anatolian Hieroglyphs renders these ancient symbols with care, preserving their monumental visual character for modern display and education.</p>
+        <p class="source-note">Sources: Wikipedia — <a href="https://en.wikipedia.org/wiki/Luwian_language" target="_blank" rel="noopener">Luwian language</a>; <a href="https://en.wikipedia.org/wiki/Anatolian_hieroglyphs" target="_blank" rel="noopener">Anatolian hieroglyphs</a></p>
+
+        <h3>Ahom</h3>
+        <p>The Ahom script was the traditional writing system of the Ahom people, who established and ruled the Ahom Kingdom in what is now Upper Assam, northeastern India, for nearly six centuries — from the 13th until the 19th century. Used to record royal chronicles, religious texts, and administrative edicts, it is closely related to other Southeast Asian scripts of Tibeto-Burman origin. The Ahom language and script declined under British colonial rule and were long considered extinct. In recent decades, however, there has been significant cultural and educational revival, with communities actively teaching and revitalizing both the language and its writing system.</p>
+        <p>Noto Serif Ahom supports this revitalization by providing a clean, digital typeface that honors the script's handwritten, flowing heritage.</p>
+        <p class="source-note">Source: Wikipedia — <a href="https://en.wikipedia.org/wiki/Ahom_language" target="_blank" rel="noopener">Ahom language</a></p>
+
+        <h3>Adlam</h3>
+        <p>Adlam is a modern writing system invented in the late 1980s by brothers Ibrahima and Abdoulaye Barry for the Fulani (Fulɓe) peoples of West and Central Africa. Created to be phonetically precise, visually distinct, and culturally empowering, it is written from right to left and has its own unique alphabet with no direct derivation from Arabic or Latin scripts. Remarkably, it was developed in modern times and has grown steadily in adoption — used in books, signage, education, and community projects across Guinea, Nigeria, Senegal, Mali, and beyond. Two forms exist: a joined cursive style for daily writing and publications, and an unjoined separated style designed specifically for learners and beginners.</p>
+        <p>Noto Sans Adlam and Noto Sans Adlam Unjoined support both forms, reflecting the script's dual identity as a living cursive and an educational tool.</p>
+        <p class="source-note">Source: Wikipedia — <a href="https://en.wikipedia.org/wiki/Adlam_script" target="_blank" rel="noopener">Adlam script</a></p>
+
+        <h3>Inclusion as Design</h3>
+        <p>These scripts are not curiosities. They represent living heritage, revived identity, and continuous cultural expression. Including them alongside Latin, Cyrillic, and Greek is a deliberate choice: digital spaces belong to all the world's writing traditions, not only the most widely encountered. When typefaces are available and properly implemented, every script can be clear, legible, and dignified on screen.</p>
+        <p>Respect in design means seeing — and serving — everyone.</p>
+
+        <a data-page="home" class="btn-primary">Return to Home</a>
+      </section>
+    </div>
+
     <div id="about" class="page">
       <section class="section">
         <h2>About This Project</h2>
@@ -107,7 +163,7 @@
         <p>Every decision made here flows from a single premise: the purpose of a website is to communicate. All other elements — styling, navigation, animation — exist to serve that purpose, never to obscure it. Content leads; presentation supports; functionality enhances.</p>
         
         <h3>Typography as Inclusion</h3>
-        <p>The inclusion of historical and regional scripts is not merely decorative. It is a statement that digital spaces belong to everyone, regardless of what writing system their language uses. Anatolian Hieroglyphs connect visitors to the ancient cultural heritage of Anatolia. Ahom preserves a script with living legacy in Northeast India. Adlam — in both joined and unjoined forms — supports a modern revitalized writing system for the Fulani peoples across West and Central Africa.</p>
+        <p>The inclusion of diverse writing systems is not merely decorative. It is a statement that digital spaces belong to everyone, regardless of what writing system their language uses. Arabic — led by Noto Sans Arabic as the primary choice, with Kufi and Naskh in supporting roles — represents one of the world's most widely used and historically significant calligraphic and typographic traditions. Anatolian Hieroglyphs connect visitors to the ancient cultural heritage of Anatolia. Ahom preserves a script with living legacy in Northeast India. Adlam — in both joined and unjoined forms — supports a modern revitalized writing system for the Fulani peoples across West and Central Africa.</p>
         <p>When these scripts are treated with the same care and typographic quality as Latin, Cyrillic, or Greek, we acknowledge the full diversity of human expression. Good design is universal by choice, not by assumption.</p>
         
         <h3>Guiding Principles</h3>
@@ -118,7 +174,30 @@
       </section>
     </div>
 
-    <!-- DESIGN -->
+    <div id="typography" class="page">
+      <section class="section">
+        <h2>Typography</h2>
+        <p>The Noto family provides a unified, high-quality set of faces designed for global readability — with distinct variants tuned for specific roles and writing systems.</p>
+        
+        <h3>Arabic — Primary and Alternatives</h3>
+        <p><strong>Noto Sans Arabic</strong> is the primary Arabic typeface throughout this project. Clean, modern, and highly legible at paragraph sizes, it balances traditional cursive connections with simplified forms suited to digital interfaces and screens. It is the recommended choice for general Arabic text.</p>
+        <p><strong>Noto Kufi Arabic</strong> — Geometric and monumental. Used for display, titles, and decorative purposes where presence and structure matter more than extended reading.</p>
+        <p><strong>Noto Naskh Arabic</strong> — Traditional and fluid. The classic book form, optimized for comfort over long passages. Used where a formal or literary tone is appropriate.</p>
+        <p>All three share identical sample text in the homepage display to make direct visual comparison straightforward.</p>
+        
+        <h3>Primary Families</h3>
+        <p><strong>Noto Sans Display / Noto Serif Display</strong> — headings and titles, spacing optimized for larger sizes.</p>
+        <p><strong>Noto Sans</strong> — default body text, highly legible.</p>
+        <p><strong>Noto Serif</strong> — long-form, articles, quoted material.</p>
+        <p><strong>Noto Sans Mono</strong> — code, notation, fixed-width content.</p>
+        
+        <h3>Specialized Script Families</h3>
+        <p><strong>Anatolian Hieroglyphs</strong> — ancient Luwian script.</p>
+        <p><strong>Ahom</strong> — historical Assamese script.</p>
+        <p><strong>Adlam Joined / Unjoined</strong> — modern Fulani script, both forms supported.</p>
+      </section>
+    </div>
+
     <div id="design" class="page">
       <section class="section">
         <h2>Design Philosophy</h2>
@@ -133,152 +212,62 @@
         <p>The layout adapts fluidly to screen size. Navigation reorganizes for smaller devices; line lengths adjust to remain comfortable; typography scales appropriately. No content is hidden, and no functionality is removed at any breakpoint.</p>
         
         <h3>Script Considerations</h3>
-        <p>Specialized writing systems receive appropriate spacing and presentation. Connected scripts such as Adlam benefit from natural cursive flow without forced letter separation. Historic or regional scripts are displayed at sizes that respect their visual complexity — larger where detail is fine, appropriately integrated when used alongside standard text.</p>
-        <p>All scripts are rendered with their own families rather than approximated through Latin or generic system faces. This preserves authentic character shapes, spacing, and aesthetic intent.</p>
-        
-        <h3>Interaction and Navigation</h3>
-        <p>Navigation is always visible and clearly indicates the current section. Hover states provide immediate but subtle feedback on interactive elements. Transitions are kept brief — long animations serve no purpose here. Page changes are instant; the experience behaves like a single coherent document rather than a series of disconnected files.</p>
-        <p>Keyboard navigation is fully supported, and focus states are preserved. All links and controls are usable with assistive technology. The interface assumes no specific input method and makes no assumptions about device capabilities.</p>
+        <p>Right-to-left writing systems such as Arabic and Adlam are rendered with natural directionality. Noto Sans Arabic serves as the standard Arabic face across the site, with Kufi and Naskh available when a specific stylistic tone is needed. Connected scripts benefit from natural cursive flow without forced separation. Specialized families preserve authentic character shapes, spacing, and aesthetic intent.</p>
       </section>
     </div>
 
-    <!-- TYPOGRAPHY -->
-    <div id="typography" class="page">
-      <section class="section">
-        <h2>Typography</h2>
-        <p>Typography is the foundation of this design. The Noto family provides a unified, high-quality set of faces designed for global readability — with distinct variants tuned for specific roles and writing systems.</p>
-        
-        <h3>Sans and Serif — Primary Families</h3>
-        <p><strong>Noto Sans Display</strong> is used for main page titles and primary headings. The Display series is spaced and proportioned to excel at larger sizes, where character shapes and proportions are most visible. Letter spacing is open; forms are clear and confident. This establishes the visual weight of each section at a glance.</p>
-        <p><strong>Noto Serif Display</strong> is applied to formal or editorial headings where a more traditional tone is appropriate. Like its sans-serif counterpart, it benefits from spacing optimized for display sizes — details that would clutter text sizes add distinction and elegance here.</p>
-        <p><strong>Noto Sans</strong> serves as the primary face for all body text. Carefully hinted and spaced for comfortable reading at standard text sizes. The design is neutral, modern, and unobtrusive — it stays out of the way while remaining highly legible across the full range of weights and styles.</p>
-        <p><strong>Noto Serif</strong> is used for longer-form passages, quoted material, or anywhere a more traditional reading experience is desired. The serifs improve flow through extended text, and the design harmonizes perfectly with the sans-serif family.</p>
-        <p><strong>Noto Sans Mono</strong> handles code samples, technical notation, and any content requiring fixed alignment. Characters are distinct and highly legible even at small sizes. It shares the same underlying design language as the rest of the family, ensuring visual consistency across all content types.</p>
-        
-        <h3>Specialized Script Families</h3>
-        <p><strong>Noto Sans Anatolian Hieroglyphs</strong> supports the Luwian hieroglyphic writing system used across ancient Anatolia and northern Syria. Each sign is rendered as a distinct glyph; the font is designed for display rather than running text. Presenting these symbols with proper typographic respect acknowledges their historical and cultural significance.</p>
-        <p><strong>Noto Serif Ahom</strong> provides the traditional script of the Ahom people, still culturally significant in Assam. The serif styling complements the script's flowing, handwritten heritage while maintaining digital clarity.</p>
-        <p><strong>Noto Sans Adlam</strong> offers the standard joined cursive form — the primary style used in printed materials and everyday writing. Connections between letters are integral to the script's visual identity and readability.</p>
-        <p><strong>Noto Sans Adlam Unjoined</strong> separates each character, simplifying recognition for new learners and beginning readers. Both forms are included because the script exists in both styles; neither is inherently secondary, and each serves its own community purpose.</p>
-        
-        <h3>Implementation Notes</h3>
-        <p>Font loading uses the Google Fonts API with preconnection hints for performance. All families are assigned to CSS variables, so adjustments or replacements can be made site-wide in one place. Script families are available separately from standard text families, allowing granular control over what is loaded — additional families may be removed if not needed for a specific deployment.</p>
-      </section>
-    </div>
-
-    <!-- FEATURES -->
     <div id="features" class="page">
       <section class="section">
         <h2>Core Features</h2>
-        <p>Every capability included here serves a demonstrable purpose. Nothing is added simply because it is fashionable.</p>
+        <p>Every capability included serves a demonstrable purpose.</p>
         
         <h3>Theme System</h3>
-        <p>Two complete color themes are included: light and dark. The system detects your operating system preference on first visit and switches automatically. You may also override this preference using the control in the navigation bar. Your choice is remembered for future visits. The transition between modes is smooth and does not interrupt reading.</p>
+        <p>Light / dark with auto system detection and manual toggle. Preference persists across visits.</p>
         
         <h3>Responsive Layout</h3>
-        <p>The design functions identically from phone to large desktop monitor. Content reflows naturally; no horizontal scrolling is ever required. Navigation condenses appropriately; text size scales consistently. The same information is presented with the same hierarchy at every size.</p>
+        <p>Fluid adaptation from phone to desktop. No content hidden, no horizontal scrolling required.</p>
         
         <h3>Comprehensive Script Support</h3>
-        <p>Beyond widely supported Latin, Cyrillic, and Greek, this template demonstrates respectful inclusion of historical and regional writing systems. These are not afterthoughts — they are implemented with dedicated families and thoughtful presentation. This sets a standard that may be extended to other writing systems as required.</p>
+        <p>Arabic with primary Sans + Kufi/Naskh alternatives; Anatolian, Ahom, Adlam; Latin, Cyrillic, Greek — all with dedicated families and proper presentation.</p>
         
-        <h3>Accessibility Foundation</h3>
-        <p>Semantic HTML structure supports screen readers and search engines. All images have descriptive alternatives; all interactive elements have accessible names; keyboard navigation is complete and logical. Color is never the sole means of conveying information — patterns, positions, and text provide redundancy.</p>
-        <p>Script samples are labeled clearly so assistive technology can identify what writing system is being displayed. Visual distinction is paired with programmatic identification wherever specialized scripts appear.</p>
+        <h3>Accessibility</h3>
+        <p>Semantic HTML, keyboard navigation, RTL directionality, contrast to WCAG standards.</p>
         
         <h3>Performance</h3>
-        <p>The total code footprint is minimal. No JavaScript frameworks, no CSS libraries, no unnecessary assets. The page loads quickly even on slow connections and uses modest device resources. This is not just a technical choice — it is an accessibility one: fast pages serve everyone, including those with limited bandwidth or older hardware.</p>
-        
-        <h3>Extensibility</h3>
-        <p>Structure and styling are kept separate and organized. Adding pages is straightforward; modifying styles is done through clear variables and classes. The system is designed to grow with you rather than constrain you.</p>
+        <p>No frameworks, no bloat. Minimal code footprint loads quickly on any connection.</p>
       </section>
     </div>
 
-    <!-- ARCHITECTURE -->
     <div id="architecture" class="page">
       <section class="section">
         <h2>Code Architecture</h2>
-        <p>The organization of the code is as important as its appearance. Clear structure ensures maintainability and makes adaptation straightforward.</p>
+        <p>Clear separation and organization for maintainability.</p>
         
-        <h3>File Structure</h3>
-        <p>All files reside at the root for simplicity. <code>index.html</code> contains the complete document structure including all page sections and font references. <code>style.css</code> contains all styling organized logically: variables, base styles, layout components, and page-specific rules. <code>script.js</code> handles theme persistence and page navigation. Static documentation files complete the repository.</p>
-        
-        <h3>HTML Structure</h3>
-        <p>Semantic elements — <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>footer</code> — define the document outline. Pages are mutually exclusive sections; only the active page is visible at any time. This keeps all content discoverable without additional network requests while maintaining a clean single-page experience.</p>
-        <p>Font families are loaded once in the document head and applied through CSS variables. Adding or removing font references requires updating only the Google Fonts link and the corresponding variable definitions in the stylesheet.</p>
-        
-        <h3>CSS Organization</h3>
-        <p>Custom properties at the top define all reusable values — colors, fonts, spacing, transitions. Base styles establish consistent defaults across browsers. Layout rules govern the frame; component rules govern reusable interface elements; page rules handle specific content layouts. This separation prevents redundancy and simplifies modification.</p>
-        <p>Script family assignments are grouped together in the variables section, making it clear which families serve which purpose. Display variants are explicitly separated from text variants in naming.</p>
-        
-        <h3>Scripting Philosophy</h3>
-        <p>JavaScript is used only where HTML and CSS alone cannot achieve the desired behavior — persisting preferences and switching visible content. The code is written for clarity; variable names describe purpose; control flow is linear and commented. No abstraction is added beyond what is necessary.</p>
-        <p>The site functions fully with scripting disabled — navigation falls back naturally, and all content remains readable.</p>
+        <h3>Files</h3>
+        <p><code>index.html</code> — structure, font references, all page content.</p>
+        <p><code>style.css</code> — variables, base styles, layout, components, script-specific rules.</p>
+        <p><code>script.js</code> — theme persistence, page navigation, submenu toggle.</p>
       </section>
     </div>
 
-    <!-- DEPLOYMENT -->
     <div id="deployment" class="page">
       <section class="section">
-        <h2>Deployment and Hosting</h2>
-        <p>Because this is pure static content, it may be hosted on nearly any web platform with minimal configuration.</p>
-        
-        <h3>GitHub Pages</h3>
-        <p>Push the repository to GitHub. Navigate to repository Settings, then Pages. Set the source to the <code>main</code> branch and save. Your site will be live at <code>https://yoshiro2017.github.io/</code> within moments. Subsequent pushes update the site automatically.</p>
-        
-        <h3>Alternative Hosting</h3>
-        <p>Any service serving static files will work identically — Netlify, Vercel, Cloudflare Pages, traditional web hosting, or your own server. Simply upload the files preserving the directory structure. No build step, compiler, or dependency installation is required.</p>
-        
-        <h3>Optimizing Font Loading</h3>
-        <p>If specialized script families are not needed for your use case, remove them from the Google Fonts URL to reduce load size. The template is structured so these families can be dropped without affecting standard text rendering. Conversely, additional Noto families may be added following the same pattern if support for other writing systems is required.</p>
-        
-        <h3>Custom Domains</h3>
-        <p>To use your own domain, point your DNS records to your chosen provider. On GitHub Pages, add your domain to the Custom Domain field in Pages settings and check the Enforce HTTPS option. An <code>CNAME</code> file is not required but may be included if preferred.</p>
-        
-        <h3>Maintenance</h3>
-        <p>Updates are made by editing the files locally and pushing or uploading. There is no database to back up, no platform to upgrade, and no security patching schedule beyond standard server hygiene. The simplicity of the architecture is its own stability.</p>
+        <h2>Deployment</h2>
+        <p>Pure static — GitHub Pages, Netlify, Vercel, Cloudflare, or any standard hosting. No build tools or dependencies needed.</p>
       </section>
     </div>
 
-    <!-- LICENSE -->
     <div id="license" class="page">
       <section class="section">
-        <h2>License and Attribution</h2>
-        <p>Everything you see here is offered freely, with clear terms and no fine print.</p>
-        
-        <h3>Code and Design</h3>
-        <p>All original code, styling, and design work is released under the MIT License. This means you are free to use, modify, distribute, and adapt this work — commercially or otherwise — provided the copyright notice and license text are preserved. There is no warranty; the project is provided exactly as-is.</p>
-        <p>A copy of the full license is included in the repository as <code>LICENSE</code>.</p>
-        
-        <h3>Typefaces</h3>
-        <p>The Noto font family is copyright Google and is licensed under the SIL Open Font License, Version 1.1. This license permits free use, modification, and redistribution of the fonts. The fonts are not modified here; they are served directly from the official Google Fonts distribution.</p>
-        <p>This applies equally to standard families and specialized script variants. Each family is covered by the same OFL terms, ensuring consistent freedom to use and share across all included writing systems.</p>
-        <p>Material Symbols are provided by Google under the Apache 2.0 License and are used as interface icons only.</p>
-        
-        <h3>Your Rights</h3>
-        <p>You may use this design as a starting point, reference it, learn from it, or rebuild it entirely. Attribution is appreciated but not legally required. If you publish something built from this, make it your own — and if you find it useful, pass the favor forward by building something respectful, accessible, and inclusive.</p>
+        <h2>License</h2>
+        <p>Code & Design: MIT License — free use, modify, distribute. Fonts: SIL OFL 1.1. Material Symbols: Apache 2.0.</p>
       </section>
     </div>
 
-    <!-- CONTACT -->
     <div id="contact" class="page">
       <section class="section">
         <h2>Contact</h2>
-        <p>This project is maintained as an open effort. Feedback, questions, and constructive observations are welcome.</p>
-        
-        <h3>Preferred Channels</h3>
-        <p>GitHub is the primary hub. Issues, discussions, and pull requests are all appropriate places to engage. For private correspondence, direct email is available at the address listed below.</p>
-        
-        <h3>What to Expect</h3>
-        <p>Messages are read carefully and thoughtfully. Responses may not be immediate, but every effort will be made to reply clearly and thoroughly. Automated messages, bulk inquiries, or requests unrelated to the project will not receive a reply.</p>
-        
-        <h3>Details</h3>
-        <p>Email: <code>penbfdiofficial@gmail.com</code></p>
-        <p>GitHub: <a href="https://github.com/Yoshiro2017" target="_blank" rel="noopener">Yoshiro2017</a></p>
-        <p>Location: Metro Manila, Philippines</p>
-        <p>Time Zone: UTC+8</p>
-        
-        <h3>Standards of Conduct</h3>
-        <p>All communication should remain respectful, constructive, and on-topic. Inclusive language is expected. Differences of opinion are welcome; hostility, discrimination, or harassment are not and will be met with immediate and permanent exclusion.</p>
+        <p>GitHub: Yoshiro2017 — Email: penbfdiofficial@gmail.com — Metro Manila, UTC+8</p>
       </section>
     </div>
   </main>
