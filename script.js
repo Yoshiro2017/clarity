@@ -1,35 +1,54 @@
 /*
 MIT License
 Copyright (c) 2026 Clarity
-Full license: see LICENSE file
 */
 
-const htmlEl = document.documentElement;
-const toggleBtn = document.querySelector('.theme-toggle');
+const html = document.documentElement;
+const toggle = document.querySelector('.theme-toggle');
+const navLinks = document.querySelectorAll('[data-page]');
+const pages = document.querySelectorAll('.page');
 
-// Load saved preference or use system default
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-  htmlEl.setAttribute('data-theme', 'dark');
-} else if (savedTheme === 'light') {
-  htmlEl.setAttribute('data-theme', 'light');
+// Theme Management
+function applyTheme(theme) {
+  if (theme === 'system') {
+    html.removeAttribute('data-theme');
+  } else {
+    html.setAttribute('data-theme', theme);
+  }
 }
 
-// Toggle theme
-toggleBtn.addEventListener('click', () => {
-  const isDark = htmlEl.getAttribute('data-theme') === 'dark';
-  htmlEl.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+// Load saved preference
+const saved = localStorage.getItem('theme') || 'system';
+applyTheme(saved);
+
+// Cycle: system → light → dark → system
+toggle.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  let next;
+  if (!current) next = 'light';
+  else if (current === 'light') next = 'dark';
+  else next = 'system';
+  
+  localStorage.setItem('theme', next);
+  applyTheme(next);
 });
 
-// Page navigation
-const navLinks = document.querySelectorAll('[data-page]');
+// Page Navigation
 navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(link.dataset.page).classList.add('active');
+  link.addEventListener('click', e => {
+    const targetId = link.getAttribute('data-page');
+    if (!targetId) return;
+    e.preventDefault();
+
+    // Update active links
     navLinks.forEach(l => l.classList.remove('active'));
-    document.querySelectorAll(`[data-page="${link.dataset.page}"]`).forEach(l => l.classList.add('active'));
-    window.scrollTo(0, 0);
+    document.querySelectorAll(`[data-page="${targetId}"]`).forEach(l => l.classList.add('active'));
+
+    // Show target page
+    pages.forEach(p => p.classList.remove('active'));
+    document.getElementById(targetId).classList.add('active');
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
