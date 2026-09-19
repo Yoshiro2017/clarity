@@ -72,7 +72,6 @@ document.querySelector('.nav-brand').addEventListener('click', () => switchPage(
 // Respect system changes when no explicit preference
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
   if (!getSavedTheme()) {
-    // Refresh without overriding user choice
     const current = body.getAttribute('data-theme');
     if (!current) {
       body.style.display = 'none';
