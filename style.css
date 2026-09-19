@@ -18,6 +18,8 @@ Copyright (c) 2026 Clarity
   --font-ahom: 'Noto Serif Ahom', serif;
   --font-adlam-joined: 'Noto Sans Adlam', sans-serif;
   --font-adlam-unjoined: 'Noto Sans Adlam Unjoined', sans-serif;
+  --font-old-north-arabian: 'Noto Sans Old North Arabian', sans-serif;
+  --font-old-south-arabian: 'Noto Sans Old South Arabian', sans-serif;
 
   --bg: #ffffff;
   --surface: #f8f9fa;
@@ -354,6 +356,22 @@ main {
   margin: 1rem 0;
 }
 
+.old-north-arabian-sample {
+  font-family: var(--font-old-north-arabian);
+  font-size: 1.75rem;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  margin: 1rem 0;
+}
+
+.old-south-arabian-sample {
+  font-family: var(--font-old-south-arabian);
+  font-size: 1.75rem;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  margin: 1rem 0;
+}
+
 .latin-sample {
   font-family: var(--font-sans);
   font-size: 1.125rem;
@@ -413,5 +431,6 @@ footer {
   .sample-block { padding: 1rem; }
   .nastaliq-sample { font-size: 1.15rem; line-height: 2; }
   .cuneiform-sample { font-size: 1.5rem; }
+  .old-north-arabian-sample, .old-south-arabian-sample { font-size: 1.4rem; }
   main { padding: 1rem 1rem 3rem; }
 }
