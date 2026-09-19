@@ -67,15 +67,16 @@ navLinks.forEach(link => {
   });
 });
 
+document.querySelector('.nav-brand').addEventListener('click', () => switchPage('home'));
+
 // Respect system changes when no explicit preference
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
   if (!getSavedTheme()) {
-    // Refresh theme without overriding user choice
+    // Refresh without overriding user choice
     const current = body.getAttribute('data-theme');
     if (!current) {
-      // Force re-render
       body.style.display = 'none';
-      body.offsetHeight; // trigger reflow
+      body.offsetHeight; // force reflow
       body.style.display = '';
     }
   }
