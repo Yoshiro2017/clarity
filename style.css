@@ -13,6 +13,7 @@ Copyright (c) 2026 Clarity
   --font-arabic-display: 'Noto Kufi Arabic', sans-serif;
   --font-arabic-traditional: 'Noto Naskh Arabic', serif;
   --font-arabic-nastaliq: 'Noto Nastaliq Urdu', serif;
+  --font-cuneiform: 'Noto Sans Cuneiform', sans-serif;
   --font-anatolian: 'Noto Sans Anatolian Hieroglyphs', sans-serif;
   --font-ahom: 'Noto Serif Ahom', serif;
   --font-adlam-joined: 'Noto Sans Adlam', sans-serif;
@@ -275,7 +276,7 @@ main {
 }
 
 .source-note {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   font-size: 0.875rem;
   color: var(--text-muted);
   border-top: 1px solid var(--border);
@@ -287,6 +288,7 @@ main {
   direction: rtl;
   font-size: 1.375rem;
   line-height: 2;
+  margin: 1rem 0;
 }
 
 .arabic-kufi-sample {
@@ -294,6 +296,7 @@ main {
   direction: rtl;
   font-size: 1.5rem;
   line-height: 1.8;
+  margin: 1rem 0;
 }
 
 .arabic-naskh-sample {
@@ -301,6 +304,7 @@ main {
   direction: rtl;
   font-size: 1.375rem;
   line-height: 2;
+  margin: 1rem 0;
 }
 
 .nastaliq-sample {
@@ -308,6 +312,14 @@ main {
   direction: rtl;
   font-size: 1.5rem;
   line-height: 2.2;
+  margin: 1.5rem 0;
+}
+
+.cuneiform-sample {
+  font-family: var(--font-cuneiform);
+  font-size: 2rem;
+  line-height: 1.8;
+  letter-spacing: 0.15em;
   margin: 1rem 0;
 }
 
@@ -316,12 +328,14 @@ main {
   font-size: 2rem;
   line-height: 1.5;
   letter-spacing: 0.1em;
+  margin: 1rem 0;
 }
 
 .ahom-sample {
   font-family: var(--font-ahom);
   font-size: 1.5rem;
   line-height: 2;
+  margin: 1rem 0;
 }
 
 .adlam-joined-sample {
@@ -329,6 +343,7 @@ main {
   direction: rtl;
   font-size: 1.5rem;
   line-height: 2;
+  margin: 1rem 0;
 }
 
 .adlam-unjoined-sample {
@@ -336,6 +351,7 @@ main {
   direction: rtl;
   font-size: 1.5rem;
   line-height: 2;
+  margin: 1rem 0;
 }
 
 .latin-sample {
@@ -396,5 +412,6 @@ footer {
   .nav-links { margin-top: 0.5rem; width: 100%; overflow-x: auto; }
   .sample-block { padding: 1rem; }
   .nastaliq-sample { font-size: 1.15rem; line-height: 2; }
+  .cuneiform-sample { font-size: 1.5rem; }
   main { padding: 1rem 1rem 3rem; }
 }
